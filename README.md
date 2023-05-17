@@ -67,6 +67,37 @@ CIRCUIT DIAGRAM
 
 
 ### PROGRAM :
+```
+Developed By:GOKUL.M
+Register Number:  212222230037
+```
+```python
+#include<Servo.h>
+Servo myservo;
+int value;
+double angle;
+
+void setup()
+{
+  Serial.begin(9600);
+  myservo.attach(9);
+}
+
+void loop()
+{
+  value= analogRead(A0);
+  angle= map(value,0,1023,0,180);
+  Serial.println(angle);
+  myservo.write(angle);
+  delay(15);
+}
+```
+### OUTPUT :
+## BEFORE SIMULATION :
+![Screenshot (37)](https://github.com/Gokul-008/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/121165996/9b72d1bf-6b09-4cad-8bcf-b51a217629c2)
+## AFTER SIMULATION :
+![Screenshot (36)](https://github.com/Gokul-008/EXPERIMENT-NO--05-INTERFACING-ANALOG-OUTPUT-SERVO-MOTOR-WITH-ARDUINO-/assets/121165996/3f980b3b-72b7-4507-be1f-94d679cbd3bc)
+
  
 
 
